@@ -41,5 +41,3 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 # Projects
 1. [BSDS 200 Final](https://coldestadam.github.io/SpotifyBSDS200/)
-
-https://coldestadam.github.io/SpotifyBSDS200/
