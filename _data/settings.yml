@@ -1,6 +1,6 @@
 basic_settings:
-  site_title: Index
-  site_tagline: A minimal, fixed sidebar grid portfolio Jekyll theme.
+  site_title: Adam's Portfolio
+  site_tagline: A collection of my different projects!
   favicon_image: /images/favicon.png
 
 header_settings:
