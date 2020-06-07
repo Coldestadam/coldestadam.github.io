@@ -1,3 +1,11 @@
+---
+title: 'Spotify Analysis'
+subtitle: 'BSDS 200 Final Project by Adam Villarreal, Brian Lopez, and Kai Middlebrook'
+date: 2020-05-12
+featured_image: '/images/SpotifyBSDS200/spotifyicon.jpg'
+---
+
+![](/images/SpotifyBSDS200/spotify_image.jpg)
 ## Personal Links
 
 - Brian Lopez
