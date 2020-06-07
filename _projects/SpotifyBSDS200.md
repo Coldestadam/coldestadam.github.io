@@ -110,7 +110,7 @@ We find that the majority of popular artists with few tracks consist of "influen
 
   Using a logistic regression (Logit) model where our outcome is binary (0 or 1), where 0 means the artist is not popular and 1 means they are popular, we can attempt to predict artist popularity based on their corresponding Twitter metrics. The equation for this model is very similar to the linear regression equation except we replace our target variable, Spotify follower count, with a variable to indicate whether an artist is popular or not. The equation is shown below:
 
-> *popular = B0 + B1(‘tweets’) + B2(‘likes’) + B3(‘following’)+ B4(‘followers’) + B5(‘media’) + B6(‘verified’) + B7(‘spotify_follower_ct’) + e*
+*popular = B0 + B1(‘tweets’) + B2(‘likes’) + B3(‘following’)+ B4(‘followers’) + B5(‘media’) + B6(‘verified’) + B7(‘spotify_follower_ct’) + e*
 
   Using the SciKit Learn Python library, we built a logistic regression model to classify artists as either 'popular' or 'not popular' based on their twitter metrics. The data processing and results are described in the following paragraphs.
 
