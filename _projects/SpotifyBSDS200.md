@@ -49,6 +49,7 @@ The variables we explored are shown below.
 17. Time Signature - An estimated overall time signature of a track. The time signature (meter) is a notational convention to specify how many beats are in each bar (or measure).
 18. Duration (ms) - The duration of the track in milliseconds.
 
+---
 
 ## How many tracks on average, does an artist release prior to becoming popular?
   In this question, we analyze whether there is a relationship between an artist's Spotify *follower*  count and the number of *tracks* they produced. Our preliminary analysis revealed that mislabeled "artist" accounts, particularly music complication and bot accounts, were significant skewing the data distribution. These "artist" accounts had significantly higher track counts than the average artist. We address this issue by removing these data points, since they do not reflect the type of artist we study in this work.
@@ -89,6 +90,7 @@ Iasmin | 1126 | [https://instagram.com/iasmin.cantora](https://instagram.com/ias
 
 We find that the majority of popular artists with few tracks consist of "influencers" from other entertainment domains (i.e., YouTube, TikTok, Instagram, etc.). However, Mc Marechal  happens to be an outlier in this regard since he is a well-known Brazilian Rapper. Nonetheless, the others seem to be influencers on Instagram and other online platforms like YouTube. To be clear, this list does not provide a completely accurate representation of the data, since it was created by heavily filtering dataset. However, the observation that influencers with large fanbase tend to be successful despite releasing fewer tracks on average makes sense.
 
+---
 
 ## How much does an artist's Twitter presence impact their popularity?
 
@@ -121,6 +123,8 @@ We find that the majority of popular artists with few tracks consist of "influen
 
   Our analysis supports that the artist popularity data is heavily skewed with 34,111 ‘not popular’ artists, and only 3,790 ‘popular’ artists, which likely is similar to the real-world distribution of popular versus non-popular artists. Consequently, we don’t expect the model to generalize well to out of distribution data, despite its high accuracy. We leave exploring more data and different models to future work.
 
+---
+
 ## What are the correlations between audio characteristics (e.g., acousticness, valence, key) and artist popularity?
 
   We looked at the artist-level audio characteristics data and determine the correlation between audio characteristics and artist popularity. There are approximately 128 thousand unique artists. Each artist has produced roughly 8 tracks. Each track has a set of audio features. These features estimate a track’s overall: valence, danceability, energy, loudness, speechiness, acousticness, instrumentalness, liveness, valence, tempo, time signature, and duration (ms). We calculated artist-level features by taking the average feature values of each track grouped by artist_id.
@@ -134,6 +138,8 @@ We find that the majority of popular artists with few tracks consist of "influen
   ![Plot #7](https://github.com/Coldestadam/SpotifyBSDS200/blob/master/plot/follower_count_audio_characteristics_scatterMatrix.png?raw=true)
 
    The scatter plot matrix between the artist follower counts variable (left most column) and a few of the average audio metrics. We can see that both danceability and energy display a relatively linear relationship with follower counts. In contrast, variables such as loudness appears to follow the [power-law distribution](https://en.wikipedia.org/wiki/Power_law), while tempo resembles the Normal distribution with respect to and follower count.
+   
+---
 
 # Conclusions
 
