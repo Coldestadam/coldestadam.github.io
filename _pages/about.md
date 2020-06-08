@@ -1,10 +1,11 @@
 ---
 title: About Me
+subtitle: Here is more info to make me more personable!
 description: Information about myself
 featured_image: /images/Headshot.jpg
 ---
 
-![](/images/Headshot.jpg){:height="50%" width="50%"}
+![](/images/Headshot.jpg){:height="60%" width="60%"}
 
 ## Features
 
