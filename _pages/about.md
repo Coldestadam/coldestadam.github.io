@@ -5,7 +5,7 @@ description: Information about myself
 featured_image: /images/Headshot.jpg
 ---
 
-![](/images/Headshot.jpg){:height="60%" width="60%"}
+![](/images/Headshot.jpg){:height="40%" width="40%"}
 
 ## Features
 
