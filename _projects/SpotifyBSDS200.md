@@ -7,7 +7,10 @@ featured_image: '/images/SpotifyBSDS200/spotifyicon.jpg'
 
 ![](/images/SpotifyBSDS200/spotify_image.jpg)
 
-<a href="https://github.com/Coldestadam/SpotifyBSDS200" class="button button--large">View Code Here</a>
+<div style="text-align:center">
+  <a href="https://github.com/Coldestadam/SpotifyBSDS200" class="button button--large">View Code Here</a>
+</div>
+
 ## Personal Links
 
 - Brian Lopez
