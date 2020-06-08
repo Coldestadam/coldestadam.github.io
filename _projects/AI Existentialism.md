@@ -8,7 +8,7 @@ featured_image: '/images/AI Existentialism/friedrich-nietzsche-19.jpg'
 
 ![](/images/AI Existentialism/nietzsche_main.jpg)
 
-style="text-align:center">
+<div style="text-align:center">
   <a href="https://github.com/Coldestadam/Existentialism-Text-Generation" class="button button--large">View Code Here</a>
 </div>
 
