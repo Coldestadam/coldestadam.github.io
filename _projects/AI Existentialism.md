@@ -85,7 +85,7 @@ As said before, gated RNNs are a solution to the Vanishing Gradient problem. LST
 There are four gates in the LSTM:
 
 1. Forget Gate - Takes the input and previous hidden state and determines what to remember<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_**f<sub>t</sub> = σ(W<sub>f</sub> · \[h<sub>t-1</sub>,x<sub>t</sub>] + b<sub>f</sub>)**_
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_**f<sub>t</sub> = σ(W<sub>f</sub> · \[h<sub>t-1</sub> ,x<sub>t</sub> ] + b<sub>f</sub>)**_
 2. Learn Gate - Decides what new information will be stored in the cell state<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_**i<sub>t</sub> = σ(W<sub>i</sub> · \[h<sub>t-1</sub>, x<sub>t</sub>] + b<sub>i</sub>)**_<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_**N<sub>t</sub> = tanh(W<sub>c</sub> · \[h<sub>t-1</sub>, x<sub>t</sub>] + b<sub>c</sub>)**_<br>
