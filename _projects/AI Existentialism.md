@@ -91,7 +91,7 @@ There are four gates in the LSTM:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_**N<sub>t</sub> = tanh(W<sub>c</sub> · \[h<sub>t-1</sub> , x<sub>t</sub> ] + b<sub>c</sub> )**_<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_**Output: N<sub>t</sub>i<sub>t</sub>**_
 3. Remember Gate - Brings Learn Gate and Forget Gate to update the cell state<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_**C<sub>t</sub> = C<sub>t-1</sub>*f<sub>t</sub> + N<sub>t</sub> * i<sub>t</sub>**_
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_**C<sub>t</sub> = C<sub>t-1</sub> * f<sub>t</sub> + N<sub>t</sub> * i<sub>t</sub>**_
 4. Use Gate - Outputs the hidden state<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_**o<sub>t</sub> = σ(W<sub>o</sub> ·\[h<sub>t-1</sub> , x<sub>t</sub> ] + b<sub>o</sub>)**_<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_**h<sub>t</sub> = o<sub>t</sub> * tanh(C<sub>t</sub>)**_
