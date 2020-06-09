@@ -100,12 +100,12 @@ There are four gates in the LSTM:
 ![](/images/AI Existentialism/skipgram.png){:height="50%" width="50%"}
 <div style="text-align:center">Skip-gram Word2Vec</div>
 
-One of the issues with early NLP problems were the dimensionality of representing individual words as a one-hot encoded vector. The problem is that they can hold a lot of unnecessary memory and can be computationally heavy when weights are connected to the vector. What Skip-gram Word2Vec does is that it outputs a unique vector for each word and decreases the dimensionality. It does this through an embedding layer or the weights of a feed-forward network. We can get a unique representation of a word through the rows in the weight matrix in a feed-forward network because the input is a one-hot encoded vector being multiplied against a weight matrix. This will just output the row of the weight matrix that corresponds with the 1 in the input. There is a great conceptual overview [here](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/) and the original paper is [here](https://arxiv.org/abs/1301.3781).
+One of the issues with early NLP problems was the dimensionality of representing individual words as a one-hot encoded vector. The problem is that they can hold a lot of unnecessary memory and can be computationally heavy when weights are connected to the vector. What Skip-gram Word2Vec does is that it outputs a unique vector for each word and decreases the dimensionality. It does this through an embedding layer or the weights of a feed-forward network. We can get a unique representation of a word through the rows in the weight matrix in a feed-forward network because the input is a one-hot encoded vector being multiplied against a weight matrix. This will just output the row of the weight matrix that corresponds with the 1 in the input. There is a great conceptual overview [here](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/) and the original paper is [here](https://arxiv.org/abs/1301.3781).
 
 ---
 
 # Creating my LSTM
-![](/images/AI Existentialism/many_to_one_rnn.png){:height="80%" width="80%"}
+![](/images/AI Existentialism/many_to_one_rnn.png){:height="50%" width="50%"}
 <div style="text-align:center">Many to One RNN</div>
 
 From the image above, my neural network will be structured like this. Each input for a time-step will be a word, and the output _y_ will be the next word after time-step _t_ in the sequence. Using the same example from the beginning of the paper, our sequence will be:
@@ -159,7 +159,7 @@ Hyperparameters shared between models:
 
 The only hyperparameter that changed was the number of hidden features that were outputted from the LSTM into the fully-connected layer.
 
-![](/images/AI Existentialism/final_plot.jpg){:height="100%" width="100%"}
+![](/images/AI Existentialism/final_plot.jpg){:height="50%" width="50%"}
 <div style="text-align:center">Each Model’s Convergence within 20 Epochs</div>
 
 Both the first model and second model were trained on the first dataset. The First Model was trained using 256 hidden features, and we can see that it performed the worst. The Second Model was trained using 512 hidden features and it performed significantly better. After seeing the beneficial effect of increasing the number of hidden features, the Shakespeare Model was trained with the same hyperparameters of the Second Model. However, since the Shakespeare Model was trained on the second dataset, the model’s performance can be explained by the dataset itself. My understanding of why it performed better was either the smaller size of the dataset or because there was only one author.
@@ -244,3 +244,10 @@ where are you sewing, because you do me so.
 # Conclusion
 After exploring the usage of sequential modeling and the importance of sequential data, LSTMs can produce state-of-the-art results. We can see that in the process of text generation, it has the availability to capture relationships between words that output text that is coherent. However, from my investigation, it was not perfect, since it failed sometimes to continue coherency throughout the sentences. Also, we would like to see if any decisions can be made about the corpus that can influence the desired output. For future work, I would like to investigate what factors can lead to better coherency throughout the entire outputted text. Also, the use of RNNs can lead to music generation and I would like to investigate how an RNN can replicate melodies from the input data.
 
+# Useful Resources:
+1. Christopher Olah: [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
+2. Ian Goodfellow, Yoshua Bengio and Aaron Courville: [Deep Learning Book Chapter 10](https://www.deeplearningbook.org/contents/rnn.html)
+3. MIT 6.S191 RNN Lecture: [Recurrent Neural Networks](https://www.youtube.com/watch?v=SEnXr6v2ifU)
+4. MIT 6.S094 RNN Lecture: [Recurrent Neural Networks for Steering Through Time](https://youtu.be/nFTQ7kHQWtc)
+5. Stanford CS231n RNN Lecture: [Lecture 10](https://youtu.be/6niqTuYFZLQ)
+6. Andrej Kaparthy: [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)
