@@ -25,29 +25,29 @@ In this project, we explore sequential modeling more in-depth and how we can pre
 <div style="text-align:center">The image is a Simple Recurrent Network or Elman Network</div>
 
 ### Defintions:
-__x<sub>t</sub> : input vector at time-step t<br>
+_x<sub>t</sub> : input vector at time-step t<br>
 h<sub>t</sub> : hidden layer vector (hidden state) at time-step t<br>
-o<sub>t</sub> : output vector at time-step t__<br>
+o<sub>t</sub> : output vector at time-step t_<br>
 
-__b<sub>h</sub> : bias used in the creation of the next hidden state<br>
-b<sub>o</sub> : bias used for the output__<br>
+_b<sub>h</sub> : bias used in the creation of the next hidden state<br>
+b<sub>o</sub> : bias used for the output_<br>
 
-__U : weight matrix from input to the hidden state<br>
+_U : weight matrix from input to the hidden state<br>
 V : weight matrix from hidden state to the next hidden state<br>
-W : weight matrix from hidden state to output__<br>
+W : weight matrix from hidden state to output_<br>
 
 All weight matrices and biases stay the same throughout each time step.
 
 ### Mathematical View:
-__x<sub>t</sub> ∈ R<sup>n</sup><br>
+_x<sub>t</sub> ∈ R<sup>n</sup><br>
 h<sub>t</sub> ∈ R<sup>d</sup><br>
 b<sub>h</sub> ∈ R<sup>d</sup><br>
-b<sub>o</sub> ∈ R<sup>k</sup><br>__
+b<sub>o</sub> ∈ R<sup>k</sup>_<br>
 
-__U ∈ R<sup>d x n</sup><br>
+_U ∈ R<sup>d x n</sup><br>
 V ∈ R<sup>d x d</sup><br>
 W ∈ R<sup>k x d</sup><br>
-(W can be the weight matrix that connects h<sub>t</sub> to a fully connected layer)__
+(W can be the weight matrix that connects h<sub>t</sub> to a fully connected layer)_
 
-__Φ : R→R
-(Activation Function between layers: tanh, relu, or sigmoid)__
+_Φ : R→R
+(Activation Function between layers: tanh, relu, or sigmoid)_
