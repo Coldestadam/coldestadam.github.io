@@ -244,6 +244,8 @@ where are you sewing, because you do me so.
 # Conclusion
 After exploring the usage of sequential modeling and the importance of sequential data, LSTMs can produce state-of-the-art results. We can see that in the process of text generation, it has the availability to capture relationships between words that output text that is coherent. However, from my investigation, it was not perfect, since it failed sometimes to continue coherency throughout the sentences. Also, we would like to see if any decisions can be made about the corpus that can influence the desired output. For future work, I would like to investigate what factors can lead to better coherency throughout the entire outputted text. Also, the use of RNNs can lead to music generation and I would like to investigate how an RNN can replicate melodies from the input data.
 
+---
+
 # Useful Resources:
 1. Christopher Olah: [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
 2. Ian Goodfellow, Yoshua Bengio and Aaron Courville: [Deep Learning Book Chapter 10](https://www.deeplearningbook.org/contents/rnn.html)
