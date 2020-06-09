@@ -53,9 +53,7 @@ _**Φ : R→R**<br>
 (Activation Function between layers: tanh, relu, or sigmoid)_
 
 1. Getting the hidden state at time-step _t_
-
 2. Applying a fully connected layer at each time step
-
 3. After calculating the output, the network will repeat these steps for the next time-step
 
 This is the en
