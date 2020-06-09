@@ -54,6 +54,9 @@ _**Φ : R→R**<br>
 
 1. Hello is this working
 2. No
+3. Maybe
+
+
 
 1. Getting the hidden state at time-step _t_
 &nbsp;&nbsp;&nbsp;&nbsp;_**h<sub>t</sub> = Φ(b+Vh<sub>t-1</sub> +Ux<sub>t</sub>)**_
