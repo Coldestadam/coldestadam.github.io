@@ -95,3 +95,37 @@ There are four gates in the LSTM:
 4. Use Gate - Outputs the hidden state<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_**o<sub>t</sub> = σ(W<sub>o</sub> ·\[h<sub>t-1</sub> , x<sub>t</sub> ] + b<sub>o</sub>)**_<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_**h<sub>t</sub> = o<sub>t</sub> * tanh(C<sub>t</sub>)**_
+
+## Skip-Gram Word2Vec
+![](/images/AI Existentialism/skipgram.png){:height="100%" width="100%"}
+<div style="text-align:center">Skip-gram Word2Vec</div>
+
+One of the issues with early NLP problems were the dimensionality of representing individual words as a one-hot encoded vector. The problem is that they can hold a lot of unnecessary memory and can be computationally heavy when weights are connected to the vector. What Skip-gram Word2Vec does is that it outputs a unique vector for each word and decreases the dimensionality. It does this through an embedding layer or the weights of a feed-forward network. We can get a unique representation of a word through the rows in the weight matrix in a feed-forward network because the input is a one-hot encoded vector being multiplied against a weight matrix. This will just output the row of the weight matrix that corresponds with the 1 in the input. There is a great conceptual overview [here](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/) and the original paper is [here](https://arxiv.org/abs/1301.3781).
+
+---
+
+# Creating my LSTM
+![](/images/AI Existentialism/many_to_one_rnn.png){:height="100%" width="100%"}
+<div style="text-align:center">Many to One RNN</div>
+
+From the image above, my neural network will be structured like this. Each input for a time-step will be a word, and the output _y_ will be the next word after time-step ​t​ in the sequence. Using the same example from the beginning of the paper, our sequence will be:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sequence = \[In, this, morning, I, usually, drink]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y = \[coffee]
+
+Using Cross-Entropy Loss, we will measure the difference between the predicted output with the correct output, in which the network will learn the patterns between the input and the output. There are outputs given at every time-step, however, we will only focus on the last time-step _t_, where we take the loss and backpropagate from there back into the network.
+
+---
+
+# Data
+
+## First Dataset
+
+The first dataset includes these Great Works:
+1. Karl Marx's [Communist Manifesto](https://www.gutenberg.org/ebooks/61)
+2. Friedrich Wilhelm Nietzsche's [Beyond Good and Evil](https://www.gutenberg.org/ebooks/4363)
+3. Friedrich Wilhelm Nietzsche's [Thus Spoke Zarathustra](https://www.gutenberg.org/ebooks/1998)
+4. Søren Kierkegaard's [Selected Writings, including Fear and Trembling](https://www.gutenberg.org/ebooks/60333)
+
+After getting the texts online, I hand-cleaned it to remove repetitive new lines, titles of chapters, commentaries, footnotes, and anything that did not contain the writing of the authors. After cleaning the texts, I concatenated the texts together and then began preprocessing it for the model. Theoretically, since all of the data is used to train the network, the proportion of how the model will be influenced by the authors is equal to the proportion of the author’s writings in the dataset. Also, the disadvantage of this dataset is that the style of writing between works is different so the generated text will not be as coherent.
+
