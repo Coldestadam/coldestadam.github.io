@@ -89,4 +89,4 @@ There are four gates in the LSTM:
 2. Learn Gate - Decides what new information will be stored in the cell state<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_**i<sub>t</sub> = σ(W<sub>i</sub> · \[h<sub>t-1</sub>, x<sub>t</sub>] + b<sub>i</sub>)**_<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_**N<sub>t</sub> = tanh(W<sub>c</sub> · \[h<sub>t-1</sub>, x<sub>t</sub>] + b<sub>c</sub>)**_<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_**Output: N<sub>t</sub>i<sub>t</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_**Output: N<sub>t</sub>i<sub>t</sub>**_
