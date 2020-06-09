@@ -37,3 +37,17 @@ V : weight matrix from hidden state to the next hidden state<br>
 W : weight matrix from hidden state to output__<br>
 
 All weight matrices and biases stay the same throughout each time step.
+
+### Mathematical View:
+__x<sub>t</sub> ∈ R<sup>n</sup><br>
+h<sub>t</sub> ∈ R<sup>d</sup><br>
+b<sub>h</sub> ∈ R<sup>d</sup><br>
+b<sub>o</sub> ∈ R<sup>k</sup><br>__
+
+__U ∈ R<sup>d x n</sup><br>
+V ∈ R<sup>d x d</sup><br>
+W ∈ R<sup>k x d</sup><br>
+(W can be the weight matrix that connects h<sub>t</sub> to a fully connected layer)__
+
+__Φ : R→R
+(Activation Function between layers: tanh, relu, or sigmoid)__
