@@ -54,7 +54,7 @@ _**Φ : R→R**<br>
 
 1. Getting the hidden state at time-step _t_<br>
   _**h<sub>t</sub> = Φ(b+Vh<sub>t-1</sub> +Ux<sub>t</sub>)**_
-2. Applying a fully connected layer at each time step
+2. Applying a fully connected layer at each time step_<br>
   _**o<sub>t</sub> = Φ(b<sub>o</sub> + Wh<sub>t</sub>)**_<br>
   (Usually, the activation function here will be softmax if you are predicting k-classes at each time step)
 3. After calculating the output, the network will repeat these steps for the next time-step
