@@ -97,7 +97,7 @@ There are four gates in the LSTM:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_**h<sub>t</sub> = o<sub>t</sub> * tanh(C<sub>t</sub>)**_
 
 ## Skip-Gram Word2Vec
-![](/images/AI Existentialism/skipgram.png){:height="100%" width="100%"}
+![](/images/AI Existentialism/skipgram.png){:height="50%" width="50%"}
 <div style="text-align:center">Skip-gram Word2Vec</div>
 
 One of the issues with early NLP problems were the dimensionality of representing individual words as a one-hot encoded vector. The problem is that they can hold a lot of unnecessary memory and can be computationally heavy when weights are connected to the vector. What Skip-gram Word2Vec does is that it outputs a unique vector for each word and decreases the dimensionality. It does this through an embedding layer or the weights of a feed-forward network. We can get a unique representation of a word through the rows in the weight matrix in a feed-forward network because the input is a one-hot encoded vector being multiplied against a weight matrix. This will just output the row of the weight matrix that corresponds with the 1 in the input. There is a great conceptual overview [here](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/) and the original paper is [here](https://arxiv.org/abs/1301.3781).
@@ -105,10 +105,10 @@ One of the issues with early NLP problems were the dimensionality of representin
 ---
 
 # Creating my LSTM
-![](/images/AI Existentialism/many_to_one_rnn.png){:height="100%" width="100%"}
+![](/images/AI Existentialism/many_to_one_rnn.png){:height="80%" width="80%"}
 <div style="text-align:center">Many to One RNN</div>
 
-From the image above, my neural network will be structured like this. Each input for a time-step will be a word, and the output _y_ will be the next word after time-step ​t​ in the sequence. Using the same example from the beginning of the paper, our sequence will be:
+From the image above, my neural network will be structured like this. Each input for a time-step will be a word, and the output _y_ will be the next word after time-step _t_ in the sequence. Using the same example from the beginning of the paper, our sequence will be:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sequence = \[In, this, morning, I, usually, drink]
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y = \[coffee]
