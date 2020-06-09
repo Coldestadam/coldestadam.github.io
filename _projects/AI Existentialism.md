@@ -52,6 +52,9 @@ W ∈ R<sup>k x d</sup>**<br>
 _**Φ : R→R**<br>
 (Activation Function between layers: tanh, relu, or sigmoid)_
 
+1. Hello is this working
+2. No
+
 1. Getting the hidden state at time-step _t_
 &nbsp;&nbsp;&nbsp;&nbsp;_**h<sub>t</sub> = Φ(b+Vh<sub>t-1</sub> +Ux<sub>t</sub>)**_
 
