@@ -49,5 +49,5 @@ V ∈ R<sup>d x d</sup><br>
 W ∈ R<sup>k x d</sup><br>
 (W can be the weight matrix that connects h<sub>t</sub> to a fully connected layer)_
 
-_Φ : R→R
+_Φ : R→R<br>
 (Activation Function between layers: tanh, relu, or sigmoid)_
