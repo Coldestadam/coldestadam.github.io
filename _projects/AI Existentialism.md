@@ -19,7 +19,7 @@ In this course, we have learned how to create Statistical/ML models that use non
 In this project, we explore sequential modeling more in-depth and how we can predict the next word from a sequence of words. For example, if the sequence is, “In this morning, I usually drink \_\_\_\_”, the model should predict ‘coffee’ or ‘tea’. I will gather great works from different authors and have the model learn from the text for the use of text generation.
 
 ---
-# Domain Background:
+# Domain Background
 ## Recurrent Neural Networks:
 ![](/images/AI Existentialism/RNNUnfolded.png){:height="80%" width="80%"}
 <div style="text-align:center">The image is a Simple Recurrent Network or Elman Network</div>
@@ -60,13 +60,24 @@ _**Φ : R→R**<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; are predicting k-classes at each time step)
 3. After calculating the output, the network will repeat these steps for the next time-step
 
-This is the en
+### Deep RNNs:
+![](/images/AI Existentialism/deep_rnn.png){:height="100%" width="100%"}
+<div style="text-align:center">The image is a Multiple-Layer RNN</div>
 
-1. Getting the hidden state at time-step _t_
-  - _**h<sub>t</sub> = Φ(b+Vh<sub>t-1</sub> +Ux<sub>t</sub>)**_
+Just as deep neural networks have multiple layers, RNNs can also have multiple layers. If the number of layers increases, the model can learn more interesting patterns. However, it becomes more computationally expensive, so you must balance your resources with the amount of time you would like to train the model. The intuition is the same, it just increases the number of hidden states per time-step.
 
-2. Applying a fully connected layer at each time step
-  - _**o<sub>t</sub> = Φ(b<sub>o</sub> + Wh<sub>t</sub>)**_
-  - (Usually, the activation function here will be softmax if you are predicting k-classes at each time step)
+## Vanishing and Exploding Gradients
+The backpropagation algorithm used in RNNs is different from feed-forward neural networks since each gradient of the loss has a dependency on all the inputs in the sequence through time. The method of backpropagation is called Backpropagation Through Time or BPTT for short. To explain this more in-depth, [here](https://www.youtube.com/watch?v=SEnXr6v2ifU&feature=youtu.be&t=1230) is a lecture that was given at MIT that explains it quite well. I encourage you to watch the entire lecture if you have time, it is great at giving the fundamentals of RNNs.
 
-3. After calculating the output, the network will repeat these steps for the next time-step
+Vanishing Gradients are when the gradients get close to 0 as they are calculated through time. Simple RNNs, such as the one we have looked at, have vanishing gradients over a certain number of time-steps in the sequence. Therefore Simple RNNs are not able to have Long-Term Dependencies after a certain number of time-steps, or rather it has difficulty remembering the data from the beginning of the sequence. Gated RNNs such as LSTMs and GRUs have risen to tackle the Vanishing Gradient problem, and LSTMs are used in this project.
+
+![](/images/AI Existentialism/gradient_clipping.png){:height="100%" width="100%"}
+<div style="text-align:center">Figure 10.17 from Section 10.11.1 of Deep Learning Book</div>
+
+Exploding Gradients are when the gradients become too large, that when an optimization step occurs, it can step so far that the model will start to converge in a different region. The solution for Exploding Gradients is to clip the gradients to prevent it from exploding. One option is to clip the norm of the gradient, and you can read more about this in [Deep Learning Book section 10.11.1](https://www.deeplearningbook.org/contents/rnn.html) by Ian Goodfellow.
+
+## Solution of LSTMs
+![](/images/AI Existentialism/LSTM.png){:height="100%" width="100%"}
+<div style="text-align:center">A Look into LSTM cell and it’s gates</div>
+
+As said before, gated RNNs are a solution to the Vanishing Gradient problem. LSTMs and GRUs are gated RNNs, and they attempt to retain information throughout a sequence. In each LSTM cell, it outputs both a cell state and a hidden state, the hidden state reacts as normally but the cell state only transfers through the cells. What LSTMs do is to learn what information needs to be passed through into the rest of the sequence and what information needs to be restricted.
