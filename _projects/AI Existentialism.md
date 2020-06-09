@@ -55,7 +55,7 @@ _**Φ : R→R**<br>
 1. Hello is this working
 2. No
 3. Maybe
-
+This is the end
 
 
 1. Getting the hidden state at time-step _t_
