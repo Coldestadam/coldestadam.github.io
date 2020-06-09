@@ -20,7 +20,7 @@ In this project, we explore sequential modeling more in-depth and how we can pre
 
 ---
 # Domain Background
-## Recurrent Neural Networks:
+## Recurrent Neural Networks
 ![](/images/AI Existentialism/RNNUnfolded.png){:height="80%" width="80%"}
 <div style="text-align:center">The image is a Simple Recurrent Network or Elman Network</div>
 
@@ -60,7 +60,7 @@ _**Φ : R→R**<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; are predicting k-classes at each time step)
 3. After calculating the output, the network will repeat these steps for the next time-step
 
-### Deep RNNs:
+### Deep RNNs
 ![](/images/AI Existentialism/deep_rnn.png){:height="50%" width="50%"}
 <div style="text-align:center">The image is a Multiple-Layer RNN</div>
 
@@ -81,3 +81,10 @@ Exploding Gradients are when the gradients become too large, that when an optimi
 <div style="text-align:center">A Look into LSTM cell and it’s gates</div>
 
 As said before, gated RNNs are a solution to the Vanishing Gradient problem. LSTMs and GRUs are gated RNNs, and they attempt to retain information throughout a sequence. In each LSTM cell, it outputs both a cell state and a hidden state, the hidden state reacts as normally but the cell state only transfers through the cells. What LSTMs do is to learn what information needs to be passed through into the rest of the sequence and what information needs to be restricted.
+
+There are four gates in the LSTM:
+
+1. Forget Gate - Takes the input and previous hidden state and determines what to remember<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_**f<sub>t</sub> = σ(W<sub>f</sub> · \[h<sub>t-1</sub>,x<sub>t</sub>] + b<sub>f</sub>)**_
+2. Learn Gate - Decides what new information will be stored in the cell state
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_**i<sub>t</sub> = σ(W<sub>i</sub> · \[h<sub>t-1</sub>, x<sub>t</sub>] + b<sub>i</sub>)**_<br>
