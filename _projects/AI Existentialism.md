@@ -25,18 +25,15 @@ In this project, we explore sequential modeling more in-depth and how we can pre
 <div style="text-align:center">The image is a Simple Recurrent Network or Elman Network</div>
 
 ### Defintions:
-__x<sub>t</sub> : input vector at time-step t
-h<sub>t</sub> : hidden layer vector (hidden state) at time-step t
-o<sub>t</sub> : output vector at time-step t__
-<br>
+__x<sub>t</sub> : input vector at time-step t<br>
+h<sub>t</sub> : hidden layer vector (hidden state) at time-step t<br>
+o<sub>t</sub> : output vector at time-step t__<br>
 
-__b<sub>h</sub> : bias used in the creation of the next hidden state
-b<sub>o</sub> : bias used for the output__
-<br>
+__b<sub>h</sub> : bias used in the creation of the next hidden state<br>
+b<sub>o</sub> : bias used for the output__<br>
 
-__U : weight matrix from input to the hidden state
-V : weight matrix from hidden state to the next hidden state
-W : weight matrix from hidden state to output__
-<br>
+__U : weight matrix from input to the hidden state<br>
+V : weight matrix from hidden state to the next hidden state<br>
+W : weight matrix from hidden state to output__<br>
 
 All weight matrices and biases stay the same throughout each time step.
