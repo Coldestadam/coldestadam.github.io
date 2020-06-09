@@ -159,7 +159,7 @@ Hyperparameters shared between models:
 
 The only hyperparameter that changed was the number of hidden features that were outputted from the LSTM into the fully-connected layer.
 
-![](/images/AI Existentialism/final_plot.jpg){:height="60%" width="60%"}
+![](/images/AI Existentialism/final_plot.jpg){:height="65%" width="65%"}
 <div style="text-align:center">Each Model’s Convergence within 20 Epochs</div>
 
 Both the first model and second model were trained on the first dataset. The First Model was trained using 256 hidden features, and we can see that it performed the worst. The Second Model was trained using 512 hidden features and it performed significantly better. After seeing the beneficial effect of increasing the number of hidden features, the Shakespeare Model was trained with the same hyperparameters of the Second Model. However, since the Shakespeare Model was trained on the second dataset, the model’s performance can be explained by the dataset itself. My understanding of why it performed better was either the smaller size of the dataset or because there was only one author.
